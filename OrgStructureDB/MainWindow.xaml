@@ -1,0 +1,104 @@
+﻿<Window x:Class="OrgStructureDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrgStructureDB"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid Background="White">
+        <Grid Background="Black" Height="50" VerticalAlignment="Top">
+            <TextBlock Text="СЛУЖБА УПРАВЛЕНИЯ ДОСТУПОМ СОТРУДНИКОВ" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0"/>
+        </Grid>
+
+        <StackPanel Margin="0,50,0,0" HorizontalAlignment="Center" Width="722">
+            <TextBlock Text="Иванов Иван Иванович" FontSize="24" FontWeight="Bold" Margin="0,20"/>
+            <StackPanel Orientation="Vertical" Height="137">
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="Пол" FontWeight="Bold"/>
+                    <TextBlock Text="Мужской" Margin="150 0 0 0"/>
+                </StackPanel>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="Дата рождения" FontWeight="Bold"/>
+                    <TextBlock Text="01.01.1990" Margin="82 0 0 0"/>
+                </StackPanel>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="Идентификатор" FontWeight="Bold"/>
+                    <TextBlock Text="123456" Margin="80 0 0 0"/>
+                </StackPanel>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="СНИЛС" FontWeight="Bold"/>
+                    <TextBlock Text="123-456-789 01" Margin="132 0 0 0"/>
+                </StackPanel>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="Тип пользователя" FontWeight="Bold"/>
+                    <TextBlock Text="Администратор" Margin="70 0 0 0"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"  Margin="0, 0, 0, 10">
+                <TextBlock Text="Контактные данные" FontSize="18" FontWeight="Bold" Margin="0, 10, 0, 10"/>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="Мобильный телефон" FontWeight="Bold"/>
+                    <TextBlock Text="123-456-7890" Margin="50 0 0 0"/>
+                </StackPanel>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="Email" FontWeight="Bold"/>
+                    <TextBlock Text="ivanov@example.com" Margin="145 0 0 0"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"  Margin="0, 0, 0, 10">
+                <TextBlock Text="Дополнительная информация" FontSize="18" FontWeight="Bold" Margin="0, 10, 0, 10"/>
+                <StackPanel Margin="0,5" Orientation="Horizontal">
+                    <TextBlock Text="Ответственный, исполнительный сотрудник с хорошими организаторскими навыками."/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel>
+                <StackPanel Margin="0,10">
+                    <Button x:Name="Button1" Content="Кадровые назначения" FontSize="18" FontWeight="Bold" Margin="0,5" Click="ToggleButton_Click" Background="WhiteSmoke"/>
+                    <TextBlock x:Name="AdditionalInfoText1" Margin="10,0,0,0" Visibility="Collapsed">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Основное назначение" FontSize="18" FontWeight="Bold" Margin="0, 10, 0, 10"/>
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <TextBlock Grid.Column="0" Text="Дата приема" FontWeight="Bold"/>
+                                <TextBlock Grid.Column="1" Text="07.07.1547" Margin="50,0,0, 0"/>
+                                
+                                <TextBlock Grid.Column="0" Text="Руководитель" FontWeight="Bold" Margin="0,20,0,0"/>
+                                <TextBlock Grid.Column="1" Text="Иван Грозный" Margin="50,20,0,0"/>
+                                
+                                <TextBlock Grid.Column="0" Text="Должность" FontWeight="Bold" Margin="0,40,0,0"/>
+                                <TextBlock Grid.Column="1" Text="самый главный" Margin="50,40,0,0"/>
+                                
+                                <TextBlock Grid.Column="0" Text="Кабинет" FontWeight="Bold" Margin="0,60,0,0"/>
+                                <TextBlock Grid.Column="1" Text="палаты" Margin="50,60,0,0"/>
+                                
+                                <TextBlock Grid.Column="0" Text="Организация" FontWeight="Bold" Margin="0,80,0,0"/>
+                                <TextBlock Grid.Column="1" Text="Русь-матушка" Margin="50,80,0,0"/>
+                            </Grid>
+
+                        </StackPanel>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Margin="0,10">
+                    <Button x:Name="Button2" Content="Ограничение доступа" FontSize="18" FontWeight="Bold" Margin="0,5" Click="ToggleButton_Click" Background="WhiteSmoke"/>
+                    <TextBlock x:Name="AdditionalInfoText2" Text="Основное назначение: Главный специалист" FontWeight="Bold" Margin="10,0,0,0" Visibility="Collapsed"/>
+                </StackPanel>
+                <StackPanel Margin="0,10">
+                    <Button x:Name="Button3" Content="Права доступа" FontSize="18" FontWeight="Bold" Margin="0,5" Click="ToggleButton_Click" Background="WhiteSmoke"/>
+                    <TextBlock x:Name="AdditionalInfoText3" Text="Основное назначение: Главный специалист" FontWeight="Bold" Margin="10,0,0,0" Visibility="Collapsed"/>
+                </StackPanel>
+                <StackPanel Margin="0,10">
+                    <Button x:Name="Button4" Content="Учетные данные" FontSize="18" FontWeight="Bold" Margin="0,5" Click="ToggleButton_Click" Background="WhiteSmoke"/>
+                    <TextBlock x:Name="AdditionalInfoText4" Text="Основное назначение: Главный специалист" FontWeight="Bold" Margin="10,0,0,0" Visibility="Collapsed"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
